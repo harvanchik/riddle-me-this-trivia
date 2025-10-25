@@ -106,25 +106,38 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-stone-50 to-green-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      class="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
+      <!-- Background Image with Blur -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="./assets/img/bar-trivia.png"
+          alt="Bar trivia scene"
+          class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 backdrop-blur-xs"></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div class="max-w-4xl mx-auto">
           <h1
-            class="text-5xl md:text-7xl font-bold text-green-900 mb-6 leading-tight">
+            class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
             Riddle Me This Trivia
           </h1>
-          <p class="text-xl md:text-2xl text-stone-700 mb-8 font-medium">
+          <p
+            class="text-xl md:text-2xl text-white mb-8 font-medium drop-shadow-md">
             Your Favorite Trivia Nights, All About the Fun!
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              class="bg-green-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              class="bg-green-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-sm bg-opacity-95">
               Get Started Today
             </a>
             <a
               href="#services"
-              class="border-2 border-green-900 text-green-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-900 hover:text-white transition-colors">
+              class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-900 transition-colors backdrop-blur-sm bg-white/10">
               Learn More
             </a>
           </div>
@@ -281,11 +294,131 @@
       id="about"
       class="py-20 bg-gradient-to-br from-stone-50 to-green-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- About Us Story -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-green-900 mb-6">About Us</h2>
+          <div class="max-w-4xl mx-auto">
+            <p class="text-lg text-stone-700 mb-6 leading-relaxed">
+              Cantrell brothers David and Anthony bring a combined
+              <strong
+                >40 years of entertainment and performing experience</strong
+              >
+              to the table. Growing up, their love for games was sparked by two
+              formative family traditions: hotly competitive Wednesday Trivial
+              Pursuit nights and the lively Saturday Bingo Club hosted by their
+              mother and aunt for over 35 years.
+            </p>
+            <p class="text-lg text-stone-700 mb-6 leading-relaxed">
+              Both of these Cantrell staples provided years and years of
+              laughter, lifelong friendships, and family unity. These weekly
+              game nights taught them that
+              <strong
+                >games are more than just fun, they are a way to bring people
+                together for a special shared experience and to make lasting
+                memories.</strong
+              >
+            </p>
+            <p class="text-lg text-stone-700 mb-8 leading-relaxed">
+              David and Anthony created Riddle Me This Trivia with a mission to
+              share that same joy and energy with others. When they host your
+              trivia or game night, you can count on an
+              <strong
+                >engaging, high-energy experience that everyone will
+                enjoy.</strong
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Brothers' Profiles -->
+        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+          <!-- David Cantrell -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="text-center mb-6">
+              <div
+                class="w-20 h-20 bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  class="w-10 h-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-green-900 mb-2">
+                David Cantrell
+              </h3>
+            </div>
+            <div class="space-y-4 text-stone-700">
+              <p class="leading-relaxed">
+                David has been a successful businessman in the financial
+                industry for <strong>30 years</strong> and has held many
+                leadership positions over the years. Most recently, he served as
+                the <strong>President of VIA</strong> and provided strong and
+                innovative leadership that proved to be vital for the business
+                community of Santa Clarita and beyond.
+              </p>
+              <p class="leading-relaxed">
+                Also, David has been a
+                <strong>Track & Field coach for 25 years</strong>, primarily at
+                West Ranch High School. His student athletes have always
+                appreciated David's inspirational guidance and abundant sense of
+                humor.
+              </p>
+            </div>
+          </div>
+
+          <!-- Anthony Cantrell -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="text-center mb-6">
+              <div
+                class="w-20 h-20 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  class="w-10 h-10 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1a1 1 0 011-1h2a1 1 0 011 1v3M7 4h10M7 4l-2 16h14l-2-16M9 9h6M9 13h6M9 17h6"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-yellow-900 mb-2">
+                Anthony Cantrell, Ph.D.
+              </h3>
+            </div>
+            <div class="space-y-4 text-stone-700">
+              <p class="leading-relaxed">
+                Anthony has been a
+                <strong
+                  >Theatre educator, actor, and director for over 40
+                  years</strong
+                >. He is an Adjunct Professor of Theatre at Los Angeles Pierce
+                College and the Director of K-12 Arts Education at The Soraya,
+                the performing arts center at Cal State, Northridge.
+              </p>
+              <p class="leading-relaxed">
+                Anthony received his
+                <strong>BA in Theatre from UCLA</strong> and his
+                <strong>Ph.D. in Theatre from the University of Michigan</strong
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Choose Us & Service Areas -->
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
           <div>
-            <h2 class="text-4xl font-bold text-green-900 mb-6">
+            <h3 class="text-3xl font-bold text-green-900 mb-6">
               Why Choose Riddle Me This Trivia?
-            </h2>
+            </h3>
             <div class="space-y-4">
               <div class="flex items-start">
                 <div
@@ -300,7 +433,10 @@
                       clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <p class="text-stone-800">Professional, friendly hosts</p>
+                <p class="text-stone-800">
+                  Professional, friendly hosts with 40+ years combined
+                  experience
+                </p>
               </div>
               <div class="flex items-start">
                 <div
@@ -345,7 +481,9 @@
                       clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <p class="text-stone-800">Promotes repeat attendance</p>
+                <p class="text-stone-800">
+                  Promotes repeat attendance and builds community
+                </p>
               </div>
               <div class="flex items-start">
                 <div
@@ -360,7 +498,9 @@
                       clip-rule="evenodd"></path>
                   </svg>
                 </div>
-                <p class="text-stone-800">Locally owned and operated</p>
+                <p class="text-stone-800">
+                  Locally owned and operated by brothers
+                </p>
               </div>
             </div>
           </div>
@@ -468,256 +608,294 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold text-green-900 mb-4">
-            Pricing Packages
+            Pricing Options
           </h2>
           <p class="text-xl text-stone-700 max-w-3xl mx-auto">
-            Choose the perfect package for your event. All packages include
-            professional hosting, equipment, and customized questions.
+            Choose the pricing model that works best for your business. Both
+            options include everything you need for a successful trivia night.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-          <!-- Basic Package -->
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+          <!-- Flat Rate Option -->
           <div
-            class="bg-gradient-to-br from-stone-50 to-stone-100 p-8 rounded-xl shadow-lg border border-stone-200 relative">
+            class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg border border-green-200 relative">
             <div class="text-center mb-6">
-              <h3 class="text-2xl font-bold text-stone-900 mb-2">Basic</h3>
-              <div class="text-4xl font-bold text-green-900 mb-2">$250</div>
-              <p class="text-stone-600">Perfect for small gatherings</p>
+              <div
+                class="w-16 h-16 bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-bold text-green-900 mb-2">Flat Rate</h3>
+              <div class="text-5xl font-bold text-green-900 mb-2">$150</div>
+              <p class="text-lg text-green-800 font-semibold">per hour</p>
+              <p class="text-stone-600 mt-2">Minimum 2-hour session</p>
             </div>
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                2-hour trivia event
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Up to 25 participants
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Basic question categories
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Professional host
-              </li>
-            </ul>
+
+            <div class="bg-white p-6 rounded-lg mb-6">
+              <h4 class="text-lg font-semibold text-green-900 mb-4 text-center">
+                Everything Included:
+              </h4>
+              <div class="grid grid-cols-1 gap-3">
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-green-900 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Computer & Equipment Setup</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-green-900 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Screen (if no TV available)</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-green-900 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Professional Speaker System</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-green-900 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Social Media Promotion</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-green-900 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>On-Site Professional Host</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-green-900 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Bingo Prizes Included</span>
+                </div>
+              </div>
+            </div>
+
             <a
               href="#contact"
-              class="w-full bg-stone-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-stone-800 transition-colors text-center block">
-              Choose Basic
+              class="w-full bg-green-900 text-white py-4 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors text-center block text-lg">
+              Book Flat Rate
             </a>
           </div>
 
-          <!-- Standard Package -->
+          <!-- 5-Week Plan Option -->
           <div
-            class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-xl border-2 border-green-300 relative transform scale-105">
+            class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl shadow-xl border-2 border-yellow-300 relative transform scale-105">
             <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <span
-                class="bg-green-900 text-white px-4 py-1 rounded-full text-sm font-semibold"
-                >Most Popular</span
-              >
+                class="bg-yellow-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                🚀 Best Value
+              </span>
             </div>
-            <div class="text-center mb-6">
-              <h3 class="text-2xl font-bold text-green-900 mb-2">Standard</h3>
-              <div class="text-4xl font-bold text-green-900 mb-2">$450</div>
-              <p class="text-stone-600">Great for medium events</p>
-            </div>
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                3-hour trivia event
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Up to 50 participants
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Themed question rounds
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Visual presentations
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-green-900 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Professional host
-              </li>
-            </ul>
-            <a
-              href="#contact"
-              class="w-full bg-green-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors text-center block">
-              Choose Standard
-            </a>
-          </div>
 
-          <!-- Premium Package -->
-          <div
-            class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl shadow-lg border border-yellow-200 relative">
             <div class="text-center mb-6">
-              <h3 class="text-2xl font-bold text-yellow-900 mb-2">Premium</h3>
-              <div class="text-4xl font-bold text-yellow-900 mb-2">$650</div>
-              <p class="text-stone-600">Perfect for large events</p>
+              <div
+                class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-bold text-yellow-900 mb-2">
+                5-Week Plan
+              </h3>
+              <p class="text-lg text-yellow-800 font-semibold mb-4">
+                Tiered Pricing for Building Momentum
+              </p>
+              <p class="text-stone-600">Each session is 2 hours</p>
             </div>
-            <ul class="space-y-3 mb-8">
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-yellow-600 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                4-hour trivia event
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-yellow-600 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Up to 100 participants
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-yellow-600 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Custom themed rounds
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-yellow-600 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Full AV setup
-              </li>
-              <li class="flex items-center text-stone-800">
-                <svg
-                  class="w-5 h-5 text-yellow-600 mr-3"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                Professional host + assistant
-              </li>
-            </ul>
+
+            <!-- Pricing Timeline -->
+            <div class="bg-white p-6 rounded-lg mb-6">
+              <h4
+                class="text-lg font-semibold text-yellow-900 mb-4 text-center">
+                Progressive Pricing:
+              </h4>
+              <div class="space-y-4">
+                <div
+                  class="flex justify-between items-center p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
+                  <span class="font-semibold text-stone-800">Weeks 1 & 2</span>
+                  <span class="text-2xl font-bold text-green-900"
+                    >$150/week</span
+                  >
+                </div>
+                <div
+                  class="flex justify-between items-center p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
+                  <span class="font-semibold text-stone-800">Weeks 3 & 4</span>
+                  <span class="text-2xl font-bold text-yellow-900"
+                    >$250/week</span
+                  >
+                </div>
+                <div
+                  class="flex justify-between items-center p-3 bg-red-50 rounded-lg border-l-4 border-red-500">
+                  <span class="font-semibold text-stone-800">Week 5+</span>
+                  <span class="text-2xl font-bold text-red-900">$300/week</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Same Features -->
+            <div class="bg-white p-6 rounded-lg mb-6">
+              <h4
+                class="text-lg font-semibold text-yellow-900 mb-4 text-center">
+                Same Full Setup:
+              </h4>
+              <div class="grid grid-cols-1 gap-3">
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Computer & Equipment Setup</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Screen (if needed)</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Professional Speaker System</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>Social Media Promotion</span>
+                </div>
+                <div class="flex items-center text-stone-800">
+                  <svg
+                    class="w-5 h-5 text-yellow-600 mr-3 flex-shrink-0"
+                    fill="currentColor"
+                    viewBox="0 0 20 20">
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <span>On-Site Professional Host</span>
+                </div>
+              </div>
+            </div>
+
             <a
               href="#contact"
-              class="w-full bg-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors text-center block">
-              Choose Premium
+              class="w-full bg-yellow-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors text-center block text-lg">
+              Start 5-Week Plan
             </a>
           </div>
         </div>
 
-        <!-- Custom Quote Section -->
+        <!-- Value Proposition Banner -->
         <div
-          class="bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-8 text-center border border-red-200">
-          <h3 class="text-2xl font-bold text-red-900 mb-4">
-            Need Something Custom?
+          class="bg-gradient-to-r from-green-900 to-green-800 rounded-xl p-8 text-center text-white">
+          <h3 class="text-2xl font-bold mb-4">
+            🎯 Why Choose Our 5-Week Plan?
           </h3>
-          <p class="text-stone-700 mb-6 max-w-2xl mx-auto">
-            Have a special event or unique requirements? We'd love to create a
-            custom package just for you. Contact us for a personalized quote.
-          </p>
-          <a
-            href="#contact"
-            class="bg-red-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-800 transition-colors inline-block">
-            Contact for Custom Quote
-          </a>
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-3xl mb-2">📈</div>
+              <h4 class="font-semibold mb-2">Build Momentum</h4>
+              <p class="text-sm opacity-90">
+                Start affordable, grow with success
+              </p>
+            </div>
+            <div>
+              <div class="text-3xl mb-2">💰</div>
+              <h4 class="font-semibold mb-2">Proven ROI</h4>
+              <p class="text-sm opacity-90">
+                Higher prices reflect growing crowds
+              </p>
+            </div>
+            <div>
+              <div class="text-3xl mb-2">🤝</div>
+              <h4 class="font-semibold mb-2">Partnership</h4>
+              <p class="text-sm opacity-90">We grow together, you succeed</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
