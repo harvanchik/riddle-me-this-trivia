@@ -7,6 +7,10 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Riddle Me This Trivia - Your Favorite Trivia Nights</title>
     <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   </head>
 
   <body class="bg-stone-50 text-stone-900 scroll-smooth">
@@ -21,6 +25,7 @@
               Riddle Me This Trivia
             </h1>
           </div>
+          <!-- Desktop Navigation -->
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
@@ -49,6 +54,25 @@
                 >Contact</a
               >
             </div>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-stone-700 hover:text-green-900 focus:outline-none focus:text-green-900">
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
           </div>
           <div class="md:hidden">
             <button
@@ -122,22 +146,23 @@
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div class="max-w-4xl mx-auto">
           <h1
-            class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg px-4">
             Riddle Me This Trivia
           </h1>
           <p
-            class="text-xl md:text-2xl text-white mb-8 font-medium drop-shadow-md">
+            class="text-lg sm:text-xl md:text-2xl text-white mb-6 sm:mb-8 font-medium drop-shadow-md px-4">
             Your Favorite Trivia Nights, All About the Fun!
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <a
               href="#contact"
-              class="bg-green-900 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-sm bg-opacity-95">
+              class="bg-green-900 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-green-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-sm bg-opacity-95">
               Get Started Today
             </a>
             <a
               href="#services"
-              class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-900 transition-colors backdrop-blur-sm bg-white/10">
+              class="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-white hover:text-green-900 transition-colors backdrop-blur-sm bg-white/10">
               Learn More
             </a>
           </div>
@@ -148,34 +173,29 @@
     <!-- What We Do Section -->
     <section id="services" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-green-900 mb-4">What We Do</h2>
-          <p class="text-xl text-stone-700 max-w-3xl mx-auto">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-green-900 mb-4">
+            What We Do
+          </h2>
+          <p class="text-lg sm:text-xl text-stone-700 max-w-3xl mx-auto px-4">
             We bring excitement and engagement to your events with professional
             trivia hosting services tailored to your needs.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <!-- Pubs and Breweries -->
           <div
-            class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-red-200">
+            class="bg-gradient-to-br from-red-50 to-red-100 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-red-200">
             <div class="text-center mb-6">
               <div
                 class="w-16 h-16 bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                </svg>
+                <img
+                  src="./assets/img/beer.png"
+                  alt="Beer mug icon"
+                  class="w-8 h-8 object-contain brightness-0 invert" />
               </div>
-              <h3 class="text-2xl font-bold text-red-900 mb-4">
+              <h3 class="text-xl sm:text-2xl font-bold text-red-900 mb-4">
                 Pubs and Breweries
               </h3>
             </div>
@@ -202,23 +222,16 @@
 
           <!-- Business and Team Building -->
           <div
-            class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-green-200">
+            class="bg-gradient-to-br from-green-50 to-green-100 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-green-200">
             <div class="text-center mb-6">
               <div
                 class="w-16 h-16 bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
+                <img
+                  src="./assets/img/support.png"
+                  alt="Support icon"
+                  class="w-8 h-8 object-contain brightness-0 invert" />
               </div>
-              <h3 class="text-2xl font-bold text-green-900 mb-4">
+              <h3 class="text-xl sm:text-2xl font-bold text-green-900 mb-4">
                 Business and Team Building
               </h3>
             </div>
@@ -245,23 +258,16 @@
 
           <!-- Fundraisers and Private Parties -->
           <div
-            class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-yellow-200">
+            class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-yellow-200">
             <div class="text-center mb-6">
               <div
                 class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg
-                  class="w-8 h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                </svg>
+                <img
+                  src="./assets/img/balloon.png"
+                  alt="Balloon icon"
+                  class="w-8 h-8 object-contain brightness-0 invert" />
               </div>
-              <h3 class="text-2xl font-bold text-yellow-900 mb-4">
+              <h3 class="text-xl sm:text-2xl font-bold text-yellow-900 mb-4">
                 Fundraisers and Private Parties
               </h3>
             </div>
@@ -295,10 +301,13 @@
       class="py-20 bg-gradient-to-br from-stone-50 to-green-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- About Us Story -->
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-green-900 mb-6">About Us</h2>
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-green-900 mb-6">
+            About Us
+          </h2>
           <div class="max-w-4xl mx-auto">
-            <p class="text-lg text-stone-700 mb-6 leading-relaxed">
+            <p
+              class="text-base sm:text-lg text-stone-700 mb-6 leading-relaxed px-4">
               Cantrell brothers David and Anthony bring a combined
               <strong
                 >40 years of entertainment and performing experience</strong
@@ -308,7 +317,8 @@
               Pursuit nights and the lively Saturday Bingo Club hosted by their
               mother and aunt for over 35 years.
             </p>
-            <p class="text-lg text-stone-700 mb-6 leading-relaxed">
+            <p
+              class="text-base sm:text-lg text-stone-700 mb-6 leading-relaxed px-4">
               Both of these Cantrell staples provided years and years of
               laughter, lifelong friendships, and family unity. These weekly
               game nights taught them that
@@ -318,7 +328,8 @@
                 memories.</strong
               >
             </p>
-            <p class="text-lg text-stone-700 mb-8 leading-relaxed">
+            <p
+              class="text-base sm:text-lg text-stone-700 mb-8 leading-relaxed px-4">
               David and Anthony created Riddle Me This Trivia with a mission to
               share that same joy and energy with others. When they host your
               trivia or game night, you can count on an
@@ -331,9 +342,10 @@
         </div>
 
         <!-- Brothers' Profiles -->
-        <div class="grid lg:grid-cols-2 gap-12 mb-16">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-12 sm:mb-16">
           <!-- David Cantrell -->
-          <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
             <div class="text-center mb-6">
               <div
                 class="w-20 h-20 bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -373,7 +385,7 @@
           </div>
 
           <!-- Anthony Cantrell -->
-          <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
             <div class="text-center mb-6">
               <div
                 class="w-20 h-20 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -504,7 +516,7 @@
               </div>
             </div>
           </div>
-          <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
             <h3 class="text-2xl font-bold text-green-900 mb-6 text-center">
               Service Areas
             </h3>
@@ -606,20 +618,20 @@
     <!-- Pricing Section -->
     <section id="pricing" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-green-900 mb-4">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-green-900 mb-4">
             Pricing Options
           </h2>
-          <p class="text-xl text-stone-700 max-w-3xl mx-auto">
+          <p class="text-lg sm:text-xl text-stone-700 max-w-3xl mx-auto px-4">
             Choose the pricing model that works best for your business. Both
             options include everything you need for a successful trivia night.
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-12">
           <!-- Flat Rate Option -->
           <div
-            class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg border border-green-200 relative">
+            class="bg-gradient-to-br from-green-50 to-green-100 p-6 sm:p-8 rounded-xl shadow-lg border border-green-200 relative">
             <div class="text-center mb-6">
               <div
                 class="w-16 h-16 bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -635,17 +647,26 @@
                     d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
                 </svg>
               </div>
-              <h3 class="text-3xl font-bold text-green-900 mb-2">Flat Rate</h3>
-              <div class="text-5xl font-bold text-green-900 mb-2">$150</div>
-              <p class="text-lg text-green-800 font-semibold">per hour</p>
-              <p class="text-stone-600 mt-2">Minimum 2-hour session</p>
+              <h3 class="text-2xl sm:text-3xl font-bold text-green-900 mb-2">
+                Flat Rate
+              </h3>
+              <div class="text-4xl sm:text-5xl font-bold text-green-900 mb-2">
+                $150
+              </div>
+              <p class="text-base sm:text-lg text-green-800 font-semibold">
+                per hour
+              </p>
+              <p class="text-sm sm:text-base text-stone-600 mt-2">
+                Minimum 2-hour session
+              </p>
             </div>
 
-            <div class="bg-white p-6 rounded-lg mb-6">
-              <h4 class="text-lg font-semibold text-green-900 mb-4 text-center">
+            <div class="bg-white p-4 sm:p-6 rounded-lg mb-6">
+              <h4
+                class="text-base sm:text-lg font-semibold text-green-900 mb-4 text-center">
                 Everything Included:
               </h4>
-              <div class="grid grid-cols-1 gap-3">
+              <div class="grid grid-cols-1 gap-2 sm:gap-3">
                 <div class="flex items-center text-stone-800">
                   <svg
                     class="w-5 h-5 text-green-900 mr-3 flex-shrink-0"
@@ -723,18 +744,18 @@
 
             <a
               href="#contact"
-              class="w-full bg-green-900 text-white py-4 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors text-center block text-lg">
+              class="w-full bg-green-900 text-white py-3 sm:py-4 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors text-center block text-base sm:text-lg">
               Book Flat Rate
             </a>
           </div>
 
           <!-- 5-Week Plan Option -->
           <div
-            class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-xl shadow-xl border-2 border-yellow-300 relative transform scale-105">
+            class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 sm:p-8 rounded-xl shadow-xl border-2 border-yellow-300 relative transform lg:scale-105">
             <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <span
                 class="bg-yellow-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                🚀 Best Value
+                Best Value
               </span>
             </div>
 
@@ -753,40 +774,54 @@
                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
               </div>
-              <h3 class="text-3xl font-bold text-yellow-900 mb-2">
+              <h3 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-2">
                 5-Week Plan
               </h3>
-              <p class="text-lg text-yellow-800 font-semibold mb-4">
+              <p
+                class="text-base sm:text-lg text-yellow-800 font-semibold mb-4">
                 Tiered Pricing for Building Momentum
               </p>
-              <p class="text-stone-600">Each session is 2 hours</p>
+              <p class="text-sm sm:text-base text-stone-600">
+                Each session is 2 hours
+              </p>
             </div>
 
             <!-- Pricing Timeline -->
-            <div class="bg-white p-6 rounded-lg mb-6">
+            <div class="bg-white p-4 sm:p-6 rounded-lg mb-6">
               <h4
-                class="text-lg font-semibold text-yellow-900 mb-4 text-center">
+                class="text-base sm:text-lg font-semibold text-yellow-900 mb-4 text-center">
                 Progressive Pricing:
               </h4>
-              <div class="space-y-4">
+              <div class="space-y-3 sm:space-y-4">
                 <div
                   class="flex justify-between items-center p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
-                  <span class="font-semibold text-stone-800">Weeks 1 & 2</span>
-                  <span class="text-2xl font-bold text-green-900"
+                  <span
+                    class="font-semibold text-stone-800 text-sm sm:text-base"
+                    >Weeks 1 & 2</span
+                  >
+                  <span class="text-xl sm:text-2xl font-bold text-green-900"
                     >$150/week</span
                   >
                 </div>
                 <div
                   class="flex justify-between items-center p-3 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
-                  <span class="font-semibold text-stone-800">Weeks 3 & 4</span>
-                  <span class="text-2xl font-bold text-yellow-900"
+                  <span
+                    class="font-semibold text-stone-800 text-sm sm:text-base"
+                    >Weeks 3 & 4</span
+                  >
+                  <span class="text-xl sm:text-2xl font-bold text-yellow-900"
                     >$250/week</span
                   >
                 </div>
                 <div
                   class="flex justify-between items-center p-3 bg-red-50 rounded-lg border-l-4 border-red-500">
-                  <span class="font-semibold text-stone-800">Week 5+</span>
-                  <span class="text-2xl font-bold text-red-900">$300/week</span>
+                  <span
+                    class="font-semibold text-stone-800 text-sm sm:text-base"
+                    >Week 5+</span
+                  >
+                  <span class="text-xl sm:text-2xl font-bold text-red-900"
+                    >$300/week</span
+                  >
                 </div>
               </div>
             </div>
@@ -863,7 +898,7 @@
 
             <a
               href="#contact"
-              class="w-full bg-yellow-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors text-center block text-lg">
+              class="w-full bg-yellow-600 text-white py-3 sm:py-4 px-6 rounded-lg font-semibold hover:bg-yellow-700 transition-colors text-center block text-base sm:text-lg">
               Start 5-Week Plan
             </a>
           </div>
@@ -905,19 +940,21 @@
       id="contact"
       class="py-20 bg-gradient-to-br from-stone-50 to-green-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-green-900 mb-4">Get In Touch</h2>
-          <p class="text-xl text-stone-700 max-w-3xl mx-auto">
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-green-900 mb-4">
+            Get In Touch
+          </h2>
+          <p class="text-lg sm:text-xl text-stone-700 max-w-3xl mx-auto px-4">
             Ready to bring the fun to your next event? Contact us today to book
             your trivia night!
           </p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           <!-- Contact Info -->
-          <div class="space-y-8">
+          <div class="space-y-6 sm:space-y-8">
             <div>
-              <h3 class="text-2xl font-bold text-green-900 mb-6">
+              <h3 class="text-xl sm:text-2xl font-bold text-green-900 mb-6">
                 Contact Information
               </h3>
               <div class="space-y-4">
@@ -985,7 +1022,7 @@
           </div>
 
           <!-- Contact Form -->
-          <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
             <form id="contact-form" class="space-y-6">
               <div>
                 <label
@@ -996,7 +1033,7 @@
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="from_name"
                   required
                   class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-900 focus:border-transparent transition-colors" />
               </div>
@@ -1010,7 +1047,7 @@
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="from_email"
                   required
                   class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-900 focus:border-transparent transition-colors" />
               </div>
@@ -1023,7 +1060,7 @@
                 >
                 <select
                   id="event-type"
-                  name="event-type"
+                  name="event_type"
                   class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-900 focus:border-transparent transition-colors">
                   <option value="">Select event type</option>
                   <option value="pub-brewery">Pub/Brewery Trivia Night</option>
@@ -1044,7 +1081,7 @@
                 <input
                   type="date"
                   id="event-date"
-                  name="event-date"
+                  name="event_date"
                   class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-900 focus:border-transparent transition-colors" />
               </div>
 
@@ -1064,7 +1101,7 @@
 
               <button
                 type="submit"
-                class="w-full bg-green-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors">
+                class="cursor-pointer w-full bg-green-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors">
                 Send Message
               </button>
             </form>
@@ -1076,9 +1113,9 @@
     <!-- Footer -->
     <footer class="bg-stone-900 text-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           <div>
-            <h3 class="text-2xl font-bold text-white mb-4">
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">
               Riddle Me This Trivia
             </h3>
             <p class="text-stone-300 mb-4">
@@ -1088,7 +1125,9 @@
           </div>
 
           <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 class="text-base sm:text-lg font-semibold text-white mb-4">
+              Quick Links
+            </h4>
             <div class="space-y-2">
               <a
                 href="#home"
@@ -1119,7 +1158,9 @@
           </div>
 
           <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+            <h4 class="text-base sm:text-lg font-semibold text-white mb-4">
+              Contact
+            </h4>
             <div class="space-y-2 text-stone-300">
               <p>riddlemethistrivia@gmail.com</p>
               <p>riddlemethistrivia.com</p>
@@ -1137,6 +1178,11 @@
     </footer>
 
     <script>
+      // Initialize EmailJS
+      (function () {
+        emailjs.init('WAZj-Xp_D98Yv3yel');
+      })();
+
       // Mobile menu toggle
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -1226,7 +1272,7 @@
       // Form submission handling
       const contactForm = document.getElementById('contact-form');
 
-      contactForm.addEventListener('submit', e => {
+      contactForm.addEventListener('submit', async e => {
         e.preventDefault();
 
         // Get form data
@@ -1243,18 +1289,48 @@
         if (eventDate) mailtoBody += `Event Date: ${eventDate}\n`;
         mailtoBody += `Message: ${message}`;
 
-        const mailtoLink = `mailto:riddlemethistrivia@gmail.com?subject=New Trivia Event Inquiry&body=${encodeURIComponent(mailtoBody)}`;
+        // Show loading state
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
 
-        // Open email client
-        window.location.href = mailtoLink;
+        try {
+          // Send email using EmailJS sendForm method
+          const serviceID = 'service_31okor7';
+          const templateID = 'template_foei229';
 
-        // Show success message
-        alert(
-          'Thank you for your inquiry! Your email client should open with a pre-filled message.',
-        );
+          // Use sendForm which automatically maps form fields to template variables
+          await emailjs.sendForm(serviceID, templateID, contactForm);
 
-        // Reset form
-        contactForm.reset();
+          // Show success message
+          alert('Thank you for your inquiry! We will get back to you soon.');
+
+          // Reset form
+          contactForm.reset();
+        } catch (error) {
+          console.error('Error sending email:', error);
+          console.error('Error details:', error.text || error.message);
+
+          // Show specific error message
+          let errorMessage = 'Email service error: ';
+          if (error.text) {
+            errorMessage += error.text;
+          } else if (error.message) {
+            errorMessage += error.message;
+          } else {
+            errorMessage += 'Unknown error occurred';
+          }
+
+          alert(
+            errorMessage +
+              '\n\nPlease try again or contact us directly at riddlemethistrivia@gmail.com',
+          );
+        } finally {
+          // Reset button state
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        }
       });
     </script>
   </body>
