@@ -90,9 +90,12 @@ function javascript() {
  */
 function images() {
   return gulp
-    .src([
-      `${root}assets/img/**/*.{png,jpg,jpeg,jfif,gif,webp,pdf,bmp,tif,tiff,raw,cr2,nef,sr2,heif,hdr,ppm,pgm,pbm,pnm,exif}`,
-    ])
+    .src(
+      [
+        `${root}assets/img/**/*.{png,jpg,jpeg,jfif,gif,webp,pdf,bmp,tif,tiff,raw,cr2,nef,sr2,heif,hdr,ppm,pgm,pbm,pnm,exif}`,
+      ],
+      { encoding: false },
+    )
     .pipe(
       image({
         quiet: true, // set to false to log results for every image processed
