@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <nav
       id="navbar"
-      class="fixed top-0 w-full z-50 transition-all duration-300 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50">
+      class="fixed top-0 w-full z-50 transition-all duration-300 bg-stone-50 border-b border-stone-200/50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex-shrink-0">
@@ -29,28 +29,23 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-8">
               <a
-                href="#home"
-                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >Home</a
-              >
-              <a
                 href="#services"
-                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-base md:text-lg font-medium transition-colors"
                 >What We Do</a
               >
               <a
                 href="#about"
-                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-base md:text-lg font-medium transition-colors"
                 >About</a
               >
               <a
                 href="#pricing"
-                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-base md:text-lg font-medium transition-colors"
                 >Pricing</a
               >
               <a
                 href="#contact"
-                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                class="nav-link text-stone-700 hover:text-green-900 px-3 py-2 rounded-md text-base md:text-lg font-medium transition-colors"
                 >Contact</a
               >
             </div>
@@ -81,11 +76,6 @@
         id="mobile-menu"
         class="md:hidden hidden bg-stone-50 border-t border-stone-200">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#home"
-            class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-green-900"
-            >Home</a
-          >
           <a
             href="#services"
             class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-green-900"
@@ -1184,21 +1174,16 @@
 
       // Navbar scroll effect
       const navbar = document.getElementById('navbar');
-      let lastScrollTop = 0;
 
       window.addEventListener('scroll', () => {
         const scrollTop =
           window.pageYOffset || document.documentElement.scrollTop;
 
         if (scrollTop > 100) {
-          navbar.classList.remove('bg-stone-50/80');
-          navbar.classList.add('bg-stone-50', 'shadow-lg');
+          navbar.classList.add('shadow-lg');
         } else {
-          navbar.classList.add('bg-stone-50/80');
-          navbar.classList.remove('bg-stone-50', 'shadow-lg');
+          navbar.classList.remove('shadow-lg');
         }
-
-        lastScrollTop = scrollTop;
       });
 
       // Smooth scroll for all anchor links (navigation and hero buttons)
